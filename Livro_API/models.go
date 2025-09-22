@@ -31,6 +31,13 @@ func NewLivroArmazem() *LivroArmazem {
 				DataPublicacao: "18/06/2014",
 				Lingua:         "Inglês",
 			},
+			{
+				ID:             "2",
+				Titulo:         "A Beginners Further Guide to Mathematical Logic",
+				Autor:          "Raymond Smullyan",
+				DataPublicacao: "11/11/2016",
+				Lingua:         "Inglês",
+			},
 		},
 	}
 }

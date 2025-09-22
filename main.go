@@ -27,7 +27,7 @@ func LivrosRotas() chi.Router {
 	livroHandler := livroapi.LivroHandler{
 		Armazem: armazem,
 	}
-	r.Get("/", livroHandler.GetLivros)
+	r.Get("/", livroHandler.ListaLivros)
 	r.Post("/", livroHandler.CreateLivro)
 	r.Get("/{id}", livroHandler.GetLivros)
 	r.Put("/{id}", livroHandler.UpdateLivro)
