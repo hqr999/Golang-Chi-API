@@ -23,7 +23,10 @@ func main() {
 
 func LivrosRotas() chi.Router {
 	r := chi.NewRouter()
-	livroHandler := livroapi.LivroHandler{}
+	armazem := livroapi.NewLivroArmazem()
+	livroHandler := livroapi.LivroHandler{
+		Armazem: armazem,
+	}
 	r.Get("/", livroHandler.GetLivros)
 	r.Post("/", livroHandler.CreateLivro)
 	r.Get("/{id}", livroHandler.GetLivros)
