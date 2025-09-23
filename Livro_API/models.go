@@ -1,5 +1,13 @@
 package livroapi
 
+import (
+	"encoding/json"
+	"log"
+	"os"
+	"path/filepath"
+	"runtime"
+)
+
 type LivroArmazenamento interface {
 	Lista() []*Livro
 	Get(string) *Livro
@@ -20,26 +28,38 @@ type Livro struct {
 	Lingua         string `json:"lingua_original"`
 }
 
-// NewLivroArmazem creates and returns a pointer to a new LivroArmazem instance.
+//caminhoAbsoluto resolve o caminho de um arquivo de forma segura.
+func caminhoAbsoluto(caminho string) string {
+	//Pega o caminho do arquivo que está sendo executado	
+	_,nome_arq,_,ok := runtime.Caller(1)
+		
+		if !ok {
+				panic("Falha ao obter o caminho do arquivo atual")
+		}
+		//Junta o diretório do arquivo atual com o caminho do arquivo desejado 
+	return filepath.Join(filepath.Dir(nome_arq),caminho)
+
+}
+
+// NewLivroArmazem cria e retorna um ponteiro para uma mova instância de LivroArmazem.
 func NewLivroArmazem() *LivroArmazem {
-	return &LivroArmazem{
-		livros: []*Livro{
-			{
-				ID:             "1",
-				Titulo:         "A Beginners Guide to Mathematical Logic",
-				Autor:          "Raymond Smullyan",
-				DataPublicacao: "18/06/2014",
-				Lingua:         "Inglês",
-			},
-			{
-				ID:             "2",
-				Titulo:         "A Beginners Further Guide to Mathematical Logic",
-				Autor:          "Raymond Smullyan",
-				DataPublicacao: "11/11/2016",
-				Lingua:         "Inglês",
-			},
-		},
+	//1. Primeiro vamos abrir o arquivo JSON
+	arquivo, err := os.Open(caminhoAbsoluto("../livros.json"))
+	if err != nil {
+		log.Fatalf("Falha ao abrir o arquivo JSON: %v", err)
 	}
+	defer arquivo.Close()
+
+	//2. Decodifique o conteúdo do arquivo no tipo []*Livro
+	var livros []*Livro
+	decoder := json.NewDecoder(arquivo)
+	err = decoder.Decode(&livros)
+	if err != nil {
+		log.Fatalf("Falha ao decodificar o JSON: %v", err)
+	}
+
+	//3. Retorna o armazém com os livros carregados
+	return &LivroArmazem{livros: livros}
 }
 
 func (ll *LivroArmazem) Lista() []*Livro {

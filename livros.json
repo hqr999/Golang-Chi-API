@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1",
+    "title": "A Beginners Guide to Mathematical Logic",
+    "autor": "Raymond Smullyan",
+    "data_publicacao": "2014",
+    "lingua_original": "Inglês"
+  },
+  {
+    "id": "2",
+    "title": "A Beginners Further Guide to Mathematical Logic",
+    "autor": "Raymond Smullyan",
+    "data_publicacao": "2017",
+    "lingua_original": "Inglês"
+  },
+  {
+    "id": "3",
+    "title": "Gödel's Proof",
+    "autor": "Ernest Nagel e James Newman",
+    "data_publicacao": "1958",
+    "lingua_original": "Inglês"
+  },
+  {
+    "id": "4",
+    "title": "Gödel, Escher, Bach: An Eternal Golden Braid",
+    "autor": "Douglas Hofstadter",
+    "data_publicacao": "1979",
+    "lingua_original": "Inglês"
+  },
+  {
+    "id": "5",
+    "title": "Dune",
+    "autor": "Frank Herbert",
+    "data_publicacao": "1965",
+    "lingua_original": "Inglês"
+  },
+  {
+    "id": "6",
+    "title": "Storm of Steel",
+    "autor": "Ernst Jünger",
+    "data_publicacao": "1920",
+    "lingua_original": "Alemão"
+  },
+  {
+    "id": "7",
+    "title": "Dom Casmurro",
+    "autor": "Machado de Assis",
+    "data_publicacao": "1899",
+    "lingua_original": "Português"
+  },
+  {
+    "id": "8",
+    "title": "O Cortiço",
+    "autor": "Aluísio Azevedo",
+    "data_publicacao": "1890",
+    "lingua_original": "Português"
+  },
+  {
+    "id": "9",
+    "title": "Max e os Felinos",
+    "autor": "Moacyr Scliar",
+    "data_publicacao": "1981",
+    "lingua_original": "Português"
+  }
+]

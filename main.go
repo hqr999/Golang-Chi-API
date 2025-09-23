@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
@@ -18,7 +19,11 @@ func main() {
 
 	rot.Mount("/livros", LivrosRotas())
 
-	http.ListenAndServe(":3000", rot)
+	fmt.Printf("Começando o servidor na porta: %d",3000)
+	err := http.ListenAndServe(":3000", rot)
+	if err != nil {
+			panic(err)
+	}
 }
 
 func LivrosRotas() chi.Router {
