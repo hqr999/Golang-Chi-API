@@ -16,13 +16,13 @@ Abra dois terminais, um para abrir e deixar rodando o servidor e o outro para.
 
 ## No primeiro terminal rode:
 
-> go run main.go
+    > go run main.go
 
 Cada fez que você fizer um comando http, ele aparecerá enquanto o servidor estiver rodando.
 
-## No segundo terminal rode, você pode rodar os seguintes comando com o curl:
+## No segundo terminal rode:
 
-Cada um dos comandos usando o pacote curl faz um dos comandos http, você também pode usar o POSTMAN ou outro visualizador de API.
+Cada um dos comandos usando o pacote curl faz um dos comandos http, você também pode usar o POSTMAN ou outro visualizador de API.Você pode rodar os seguintes comandos com o curl:
 
 * **GET** 
         
