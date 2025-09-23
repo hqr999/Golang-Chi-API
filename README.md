@@ -36,11 +36,11 @@ Cada um dos comandos usando o pacote curl faz um dos comandos http, você també
 
 * **DELETE**
 
-    > curl -X DELETE localhost:3000/livros/{id}
+        > curl -X DELETE localhost:3000/livros/{id}
 
 * **PUT** 
 
-    > curl -X POST \        
+        > curl -X POST \        
         -H "Content-Type: application/json" \
         -d '{"id": "número","title": "título","autor": "autor","data_publicacao": "ano", "lingua_original": "língua"}' \
         localhost:3000/livros/{id}
@@ -48,4 +48,5 @@ Cada um dos comandos usando o pacote curl faz um dos comandos http, você també
 
 # Referências 
 https://go-chi.io/#/
+
 https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
