@@ -31,7 +31,7 @@ Cada um dos comandos usando o pacote curl faz um dos comandos http, você també
 
         > curl -X POST \        
         -H "Content-Type: application/json" \
-        -d '{"id": "10","title": "Introduction to Logic and the Metodology of Deductive Sciences","autor": "Alfred Tarski","data_publicacao": "1941", "lingua_original": "Polonês"}' \
+        -d '{"id": "10","title": "Irmãos Karamázov","autor": "Fiodor Dostoievski","data_publicacao": "1883", "lingua_original": "Russo"}' \
         localhost:3000/livros
 
 * **DELETE**
