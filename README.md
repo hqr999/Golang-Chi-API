@@ -22,7 +22,7 @@ Cada fez que você fizer um comando http, ele aparecerá enquanto o servidor est
 
 ## No segundo terminal rode:
 
-Cada um dos comandos usando o pacote curl faz um dos comandos http, você também pode usar o POSTMAN ou outro visualizador de API.Você pode rodar os seguintes comandos com o curl:
+Cada um dos comandos usa o comando curl e faz um dos comandos http, você também pode usar o POSTMAN ou outra plataforma de API.Você pode rodar os seguintes comandos com o curl:
 
 * **GET** 
         
